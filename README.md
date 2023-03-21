@@ -3,7 +3,8 @@ Write up report for the HackTheBox machine Precious.
 
 - Initiated a service/network scan on the given HTB box with Nmap. `nmap -sV -sC 10.129.230.167`
 
-![image](https://user-images.githubusercontent.com/61332852/226741000-fcc9a064-ab49-4ce5-b1c7-599783669d39.png)
+![image](https://user-images.githubusercontent.com/61332852/226741282-9a311d20-c0e4-441b-a3f9-bcb0d5dbfee9.png)
+
 
 - Nmap shows that a HTTP (80) Port was open and an SSH(22) port as well. I first checked to see if there was any exploits pertaining to the services of the HTTP server that was hosting the website and as well as the SSH service running. I used the command `searchsploit` and as well searched online to double check that the results searchsploit was returning was accurate.  
 
