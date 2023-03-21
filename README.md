@@ -1,17 +1,17 @@
 # Precious.HTB-Write-Up
 Write up report for the HackTheBox machine Precious.
 
-- Initiated a service/network scan on the given HTB box with Nmap. `nmap -sV -sC 10.129.230.167`
+-Initiated a service/network scan on the given HTB box with Nmap. `nmap -sV -sC 10.129.230.167`
 
 ![image](https://user-images.githubusercontent.com/61332852/226735722-c099909e-f7c7-4d18-a68b-b9c45b85dc47.png)
 
 
-- Nmap shows that a HTTP (80) Port was open and an SSH(22) port as well. I first checked to see if there was any exploits pertaining to the services of the HTTP server that was hosting the website and as well as the SSH service running. I used the command `searchsploit` and as well searched online to double check that the results searchsploit was returning was accurate.  
+-Nmap shows that a HTTP (80) Port was open and an SSH(22) port as well. I first checked to see if there was any exploits pertaining to the services of the HTTP server that was hosting the website and as well as the SSH service running. I used the command `searchsploit` and as well searched online to double check that the results searchsploit was returning was accurate.  
 
 ![image](https://user-images.githubusercontent.com/61332852/226736215-366962c6-ee2b-488f-ad4f-17bad695c042.png)
 
 
-After seeing there was no obvious exploits to take advantage of the next step was browsing the website running. First, I added the IP to /etc/hosts file to actually access the website.   
+-After seeing there was no obvious exploits to take advantage of the next step was browsing the website running. First, I added the IP to /etc/hosts file to actually access the website.   
 
 
 
