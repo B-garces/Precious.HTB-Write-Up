@@ -80,5 +80,5 @@ Write up report for the HackTheBox machine Precious.
 
 - After going into roots home folder we find the root flag for the machine.
 
-![image](https://user-images.githubusercontent.com/61332852/226740059-8b9a243c-1bb2-42d3-a5f3-d2e2d21b4b1b.png)
+![image](https://user-images.githubusercontent.com/61332852/226740263-29e5447a-2cfb-4340-89f5-185a30987b89.png)
  
