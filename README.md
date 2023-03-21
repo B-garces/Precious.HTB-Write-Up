@@ -21,7 +21,7 @@ Write up report for the HackTheBox machine Precious.
 ![image](https://user-images.githubusercontent.com/61332852/226741549-687b06b1-c12f-476c-af0a-c0ddc96cf4ae.png)
 
 
-- After messing with the input box, I opened `BurpSuite` to see what the application was doing when inputting a URL. After inputting a couple different random websites, the application was returning nothing but a `Cannot load remote URL` message. Thus, I began to start my own python webserver on my localhost. `python3 -m http.server 80` 
+- After messing with the input box, I opened `BurpSuite` to see what the application was doing when inputting a URL. After inputting a couple different random websites, the application was returning nothing but a ***"Cannot load remote URL"*** message. Thus, I began to start my own python webserver on my localhost. `python3 -m http.server 80` 
 
 ![image](https://user-images.githubusercontent.com/61332852/226741593-13dee221-b0eb-4078-be20-a70db1163a28.png)
 
@@ -35,13 +35,13 @@ Write up report for the HackTheBox machine Precious.
 
 ![image](https://user-images.githubusercontent.com/61332852/226741706-65767298-d96a-4dd1-814f-43dbb8f7ee47.png)
 
-- I used the `searchsploit` command again here to see if there was anything it would find for `pdfkit v0.8.6` which was the software that running. It returned nothing as well so I went to google search to see if there were any vulnerabilities with the software running. I then found that it was vulnerable to `command injection` a type of injection vulnerability.    
+- I used the `searchsploit` command again here to see if there was anything it would find for ***pdfkit v0.8.6*** which was the software that running. It returned nothing as well so I went to google search to see if there were any vulnerabilities with the software running. I then found that it was vulnerable to ***command injection*** a type of injection vulnerability.    
 
 ![image](https://user-images.githubusercontent.com/61332852/226740759-38fc8f1e-892f-49a6-96ad-04a76634b2d9.png)
 
 ![image](https://user-images.githubusercontent.com/61332852/226741771-626f4fba-653e-4d38-bcc7-7bdad02b262e.png)
 
-- Reading more of the vulnerability and what we can start to do to exploit it this is what I found. `An application could be vulnerable if it tries to render a URL that contains query string parameters with user input`. After using this information, we can modify the URL to take a command as input to see if the application will run the command.  
+- Reading more of the vulnerability and what we can start to do to exploit it this is what I found. ***"An application could be vulnerable if it tries to render a URL that contains query string parameters with user input"***. After using this information, we can modify the URL to take a command as input to see if the application will run the command.  
 
 ![image](https://user-images.githubusercontent.com/61332852/226741798-232aafb6-3c92-4762-ac57-ae0948790ac7.png)
 
@@ -62,7 +62,7 @@ Write up report for the HackTheBox machine Precious.
 
 ![image](https://user-images.githubusercontent.com/61332852/226741948-58605825-7332-4cd9-bc05-10009d7285a0.png)
 
-- After checking the file, I then researched if there were any vulnerabilities with the Yaml file that was given. Then later finding that the Yaml file was vulnerable to a `Yaml Deserialization Attack` allowing us to run arbitrary code within the yaml file. We can now go look for an exploit to run in the dependency file to execute. After looking for the Ruby Yaml Exploit code we found the code to run from a GitHub Host. We then created a file within our home folder `touch dependency.yml` to paste the following code into. 
+- After checking the file, I then researched if there were any vulnerabilities with the Yaml file that was given. Then later finding that the Yaml file was vulnerable to a ***"Yaml Deserialization Attack"*** allowing us to run arbitrary code within the yaml file. We can now go look for an exploit to run in the dependency file to execute. After looking for the Ruby Yaml Exploit code we found the code to run from a GitHub Host. We then created a file within our home folder `touch dependency.yml` to paste the following code into. 
 
 ![image](https://user-images.githubusercontent.com/61332852/226741989-6c02e501-2ada-453f-952f-736cf961fe04.png)
 
